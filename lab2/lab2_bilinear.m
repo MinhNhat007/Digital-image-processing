@@ -3,7 +3,7 @@ close all;
 clc;
 
 %% wczytanie
-I = imread('clock.bmp');
+I = imread('parrot.bmp');
 figure(1);
 imshow(I);
 
@@ -43,5 +43,5 @@ for ix = 0 : (nXX-1)
     end  
 end
 
-figure(5);
+figure(2);
 imshow(nI);
