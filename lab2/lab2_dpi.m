@@ -8,7 +8,7 @@ I256 = imresize(I512, 0.5);
 I128 = imresize(I512, 0.25);
 I64  = imresize(I512, 0.125);
 
-%Display on screen
+%% Display on screen
 subplot(2,2,1);
 imshow(I512, 'InitialMagnification', 'fit');
 subplot(2,2,2);
