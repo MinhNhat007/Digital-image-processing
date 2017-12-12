@@ -5,6 +5,7 @@ clc;
 
 %% read file
 I_0 = imread('100zloty.jpg');
+I_0 = rgb2gray(I_0);
 
 %% processing: zadanie 1
 
