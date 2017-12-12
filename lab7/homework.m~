@@ -8,13 +8,22 @@ load MR_data
 
 %% processing 
 %non local means
-v = 50;
-n = 3;
+v = 5;
+n = 2;
 sigma = 10;
 alpha = 1;
-I_noisefree3 = NLM(I_noisy1,v, n, sigma, alpha);
-subplot(1,2,1); imshow(I_noisy1,[]);
-subplot(1,2,2); imshow(I_noisefree3,[]);
+
+profile on
+I_NLM = NLM(I_noisy1,v, n, sigma, alpha);
+p = profile('info')
+profile off
+
+
+%% showing 
+x = 1; y = 3;
+subplot(x,y,1); imshow(I_noisy1,[]);
+subplot(x,y,2); imshow(I_NLM,[]);
+subplot(x,y,3); imshow(I_bilateral,[]);
 %I_noisefree3 = NLM(I_noisefree, v, n, sigma, alpha);
 %local
 % local_window = [5 5];
